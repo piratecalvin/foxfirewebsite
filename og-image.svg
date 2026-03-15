@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+
+  <!-- Subtle grid -->
+  <defs>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M 72 0 L 0 0 0 72" fill="none" stroke="rgba(239,239,239,0.05)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="gridmask" cx="35%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fade">
+      <rect width="1200" height="630" fill="url(#gridmask)"/>
+    </mask>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" mask="url(#fade)"/>
+
+  <!-- Teal glow -->
+  <ellipse cx="320" cy="315" rx="400" ry="320" fill="rgba(0,196,176,0.05)"/>
+
+  <!-- Shield icon -->
+  <g transform="translate(80, 220)">
+    <path d="M44 6L12 22v22c0 20.3 13.4 39.3 32 42.5C62.6 83.3 76 64.3 76 42V22L44 6z" stroke="#00c4b0" stroke-width="3" fill="none"/>
+    <path d="M44 16l-20 10v14c0 13.2 8.7 25.6 20 27.8C55.3 65.6 64 53.2 64 40V26L44 16z" fill="#00c4b0" opacity="0.12"/>
+    <path d="M33 42l9 9L58 35" stroke="#00c4b0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- CISSP badge -->
+  <rect x="172" y="231" width="72" height="22" rx="2" fill="rgba(0,196,176,0.1)" stroke="rgba(0,196,176,0.3)" stroke-width="1"/>
+  <text x="208" y="246" font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="600" fill="#00c4b0" text-anchor="middle" letter-spacing="1.5">CISSP</text>
+
+  <!-- FoxFire Security wordmark -->
+  <text x="80" y="370" font-family="'Space Grotesk', system-ui, sans-serif" font-size="72" font-weight="700" fill="#efefef" letter-spacing="-1">FoxFire Security</text>
+
+  <!-- Tagline -->
+  <text x="80" y="420" font-family="'DM Sans', system-ui, sans-serif" font-size="24" font-weight="400" fill="rgba(239,239,239,0.6)">Fractional vCISO · GRC Consulting · AI Security</text>
+
+  <!-- Divider -->
+  <rect x="80" y="455" width="120" height="1" fill="#00c4b0" opacity="0.5"/>
+
+  <!-- Footer line -->
+  <text x="80" y="492" font-family="'DM Sans', system-ui, sans-serif" font-size="18" font-weight="400" fill="rgba(239,239,239,0.35)" letter-spacing="0.5">Calvin Higby, CISSP · Austin, TX · foxfiresecurity.com</text>
+
+  <!-- Right accent line -->
+  <rect x="1140" y="0" width="2" height="630" fill="rgba(0,196,176,0.15)"/>
+</svg>
