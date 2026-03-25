@@ -4,3 +4,10 @@
 *.log
 node_modules/
 preview-*.png
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
