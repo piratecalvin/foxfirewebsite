@@ -6,24 +6,32 @@ Single-page marketing site for FoxFire Security. Built with plain HTML, CSS, and
 
 ```
 foxfirewebsite/
-├── index.html   # All markup and content
-├── style.css    # Design system + layout
-├── script.js    # Nav scroll, fade-ins, mobile menu
+├── index.html          # All markup and content
+├── style.css           # Design system + layout
+├── script.js           # Nav scroll, fade-ins, mobile menu
+├── Headshot.jpg        # Calvin's headshot (About section)
+├── assets/
+│   ├── logo.png        # Fox logo (transparent bg, used in nav)
+│   ├── hero-motif.png  # Red swoosh background for hero section
+│   └── icons/          # Service card icons (white line art, transparent bg)
+│       ├── icon-vciso.png
+│       ├── icon-ai-security.png
+│       ├── icon-grc.png
+│       ├── icon-training.png
+│       ├── icon-ir.png
+│       └── icon-policy.png
+├── favicon.svg
+├── og-image.svg
 └── README.md
 ```
 
-## Before you deploy
+## Design system
 
-Search for `CALENDLY_LINK_HERE` in `index.html` and replace all three occurrences with your actual Calendly URL:
-
-```
-https://calendly.com/your-username/30min
-```
-
-There are three instances:
-1. Nav "Book a call" button
-2. Mobile nav "Book a call" button
-3. Contact section "Book a time →" button
+- **Background:** `#0a0a0a` (--bg), `#131214` (--bg-raised), `#1a1819` (--bg-surface)
+- **Primary accent:** `#e8462a` fox red (--accent)
+- **Secondary accent:** `#f5913a` fox orange (--secondary)
+- **Display font:** Space Grotesk (Google Fonts)
+- **Body font:** DM Sans (Google Fonts)
 
 ## Deploy to Cloudflare Pages via GitHub
 
@@ -71,8 +79,7 @@ Every push to `main` triggers an automatic deploy. Preview deployments are creat
 
 - **Content changes** — edit `index.html` directly; all copy is inline
 - **Colors / spacing** — CSS custom properties are at the top of `style.css` under `:root`
-- **Calendly link** — replace `CALENDLY_LINK_HERE` in `index.html` (three spots)
-- **Email** — `calvin@foxfiresecurity.com` appears in the footer `<a href="mailto:...">` tag
+- **Calendly link** — update the Calendly URL in `index.html` (three spots: nav, mobile nav, contact section)
 
 ## Local preview
 
