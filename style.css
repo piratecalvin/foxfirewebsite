@@ -7,16 +7,16 @@
 :root {
   /* Colors */
   --bg:           #0a0a0a;
-  --bg-raised:    #131317;
-  --bg-surface:   #1a1a1f;
-  --teal:         #00c4b0;
-  --teal-dim:     rgba(0, 196, 176, 0.10);
-  --teal-border:  rgba(0, 196, 176, 0.22);
-  --teal-glow:    0 0 18px rgba(0, 196, 176, 0.30), 0 0 56px rgba(0, 196, 176, 0.08);
-  --teal-glow-sm: 0 0 8px rgba(0, 196, 176, 0.22);
-  --amber:        #c8861a;
-  --amber-dim:    rgba(200, 134, 26, 0.12);
-  --amber-border: rgba(200, 134, 26, 0.28);
+  --bg-raised:    #131214;
+  --bg-surface:   #1a1819;
+  --accent:       #e8462a;
+  --accent-dim:   rgba(232, 70, 42, 0.10);
+  --accent-border:rgba(232, 70, 42, 0.22);
+  --accent-glow:    0 0 18px rgba(232, 70, 42, 0.30), 0 0 56px rgba(232, 70, 42, 0.08);
+  --accent-glow-sm: 0 0 8px rgba(232, 70, 42, 0.22);
+  --secondary:        #f5913a;
+  --secondary-dim:    rgba(245, 145, 58, 0.12);
+  --secondary-border: rgba(245, 145, 58, 0.28);
   --white:        #efefef;
   --white-70:     rgba(239, 239, 239, 0.70);
   --white-40:     rgba(239, 239, 239, 0.40);
@@ -106,16 +106,16 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
 }
 
 .btn--primary {
-  background: var(--teal);
+  background: var(--accent);
   color: #0a0a0a;
-  border: 1px solid var(--teal);
+  border: 1px solid var(--accent);
   font-weight: 600;
-  box-shadow: var(--teal-glow-sm);
+  box-shadow: var(--accent-glow-sm);
 }
 .btn--primary:hover {
-  background: #1ad4be;
-  border-color: #1ad4be;
-  box-shadow: var(--teal-glow);
+  background: #f05a3f;
+  border-color: #f05a3f;
+  box-shadow: var(--accent-glow);
   color: #0a0a0a;
 }
 
@@ -154,7 +154,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-weight: 500;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 0;
 }
 .section-label::before {
@@ -162,7 +162,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   display: inline-block;
   width: 28px;
   height: 1px;
-  background: var(--teal);
+  background: var(--accent);
   opacity: 0.6;
 }
 
@@ -240,16 +240,17 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   flex-shrink: 0;
   transition: color var(--dur) var(--ease);
 }
-.nav__logo:hover { color: var(--teal); }
+.nav__logo:hover { color: var(--accent); }
 
 .nav__logo-mark {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
-.nav__logo-mark svg {
+.nav__logo-mark img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .nav__badge {
@@ -258,9 +259,9 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
-  border: 1px solid var(--teal-border);
-  background: var(--teal-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
   padding: 3px 8px;
   border-radius: 2px;
   line-height: 1.4;
@@ -352,8 +353,8 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   max-height: 900px;
   transform: translateY(-55%);
   background: radial-gradient(ellipse at center,
-    rgba(0, 196, 176, 0.06) 0%,
-    rgba(0, 196, 176, 0.018) 35%,
+    rgba(232, 70, 42, 0.07) 0%,
+    rgba(232, 70, 42, 0.02) 35%,
     transparent 65%);
   pointer-events: none;
   z-index: 0;
@@ -385,6 +386,18 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   z-index: 1;
 }
 
+.hero__motif {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: 65vw;
+  max-width: 900px;
+  transform: translateY(-50%);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero__inner {
   position: relative;
   z-index: 2;
@@ -396,7 +409,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 28px;
   opacity: 0.9;
 }
@@ -409,7 +422,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 28px;
-  text-shadow: var(--teal-glow-sm);
+  text-shadow: var(--accent-glow-sm);
 }
 
 .hero__sub {
@@ -467,8 +480,8 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--teal);
-  text-shadow: var(--teal-glow-sm);
+  color: var(--accent);
+  text-shadow: var(--accent-glow-sm);
   line-height: 1;
 }
 
@@ -521,13 +534,23 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   background: var(--bg-surface);
 }
 .service-card:hover::after {
-  background: var(--teal);
-  box-shadow: 0 0 12px rgba(0, 196, 176, 0.5);
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(232, 70, 42, 0.5);
 }
 
 .service-card--amber:hover::after {
-  background: var(--amber);
-  box-shadow: 0 0 12px rgba(200, 134, 26, 0.45);
+  background: var(--secondary);
+  box-shadow: 0 0 12px rgba(245, 145, 58, 0.45);
+}
+
+.service-card__icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.55;
+  transition: opacity var(--dur) var(--ease);
+}
+.service-card:hover .service-card__icon {
+  opacity: 0.85;
 }
 
 .service-card__tag {
@@ -537,16 +560,16 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
-  border: 1px solid var(--teal-border);
-  background: var(--teal-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
   padding: 3px 10px;
   border-radius: 2px;
 }
 .service-card__tag--amber {
-  color: var(--amber);
-  border-color: var(--amber-border);
-  background: var(--amber-dim);
+  color: var(--secondary);
+  border-color: var(--secondary-border);
+  background: var(--secondary-dim);
 }
 
 .service-card__title {
@@ -556,10 +579,10 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   color: var(--white);
   line-height: 1.25;
   padding-left: 14px;
-  border-left: 2px solid var(--teal-border);
+  border-left: 2px solid var(--accent-border);
 }
 .service-card--amber .service-card__title {
-  border-left-color: var(--amber-border);
+  border-left-color: var(--secondary-border);
 }
 
 .service-card__body {
@@ -601,7 +624,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--teal);
+  color: var(--accent);
   opacity: 0.55;
   flex-shrink: 0;
   padding-top: 5px;
@@ -699,7 +722,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
 
 .about__role {
   font-size: 0.82rem;
-  color: var(--teal);
+  color: var(--accent);
   letter-spacing: 0.04em;
 }
 
@@ -724,10 +747,10 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   font-size: 0.75rem;
 }
 .about__cred--accent {
-  color: var(--teal);
+  color: var(--accent);
 }
 .about__cred--accent::before {
-  color: var(--teal);
+  color: var(--accent);
   opacity: 0.5;
 }
 
@@ -773,9 +796,9 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   border-color: var(--white-12);
 }
 .tag--accent {
-  color: var(--teal);
-  border-color: var(--teal-border);
-  background: var(--teal-dim);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
 }
 
 
@@ -803,7 +826,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   color: var(--white);
   margin-top: 20px;
   margin-bottom: 18px;
-  text-shadow: var(--teal-glow-sm);
+  text-shadow: var(--accent-glow-sm);
 }
 
 .contact__body {
@@ -826,14 +849,14 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
   margin: 0 auto;
   padding: 52px 48px;
   background: var(--bg-surface);
-  border: 1px solid var(--teal-border);
+  border: 1px solid var(--accent-border);
   border-radius: var(--radius);
-  box-shadow: 0 0 48px rgba(0, 196, 176, 0.06);
+  box-shadow: 0 0 48px rgba(232, 70, 42, 0.06);
   transition: box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .contact__card:hover {
-  border-color: rgba(0, 196, 176, 0.4);
-  box-shadow: 0 0 72px rgba(0, 196, 176, 0.09);
+  border-color: rgba(232, 70, 42, 0.4);
+  box-shadow: 0 0 72px rgba(232, 70, 42, 0.09);
 }
 
 .contact__card-title {
