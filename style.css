@@ -875,7 +875,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; color
 }
 
 .contact__card .btn {
-  align-self: flex-start;
+  align-self: center;
   margin-top: 6px;
 }
 
